@@ -1,37 +1,67 @@
 # Autonomous Multi-Agent Workflow Platform
 
-An **agentic AI workflow platform** that decomposes complex objectives, coordinates specialized AI agents, preserves workflow context, and produces structured decision-ready outputs.
+An AI-powered multi-agent workflow platform that breaks down a complex objective into specialized stages, coordinates multiple agents, preserves workflow memory, and produces a final decision-ready output.
 
-Instead of relying on a single AI response, the platform creates a multi-step workflow where specialized agents collaborate on different parts of the problem before a reviewer synthesizes the final result.
+This project demonstrates how **LangGraph-style orchestration**, **specialist AI agents**, **workflow memory**, and **modern backend integration** can be combined into one practical system.
 
 ---
 
-## What It Does
+## Overview
 
-The platform coordinates multiple specialized agents:
+The platform is designed to simulate a real multi-agent execution flow.
 
-- **Research Agent** — gathers context, evidence, assumptions, and relevant information
-- **Analysis Agent** — evaluates findings, risks, dependencies, and trade-offs
-- **Operations Agent** — converts analysis into concrete actions and implementation steps
-- **Reviewer Agent** — validates and synthesizes all outputs into the final report
+A user gives one workflow objective, and the system processes it through multiple specialized agents:
 
-The workflow is orchestrated using **LangGraph**, while **CrewAI** is used for specialist agent execution.
+- **Research Agent** – gathers and organizes relevant information
+- **Analysis Agent** – evaluates findings and identifies key insights
+- **Operations Agent** – creates action plans and recommendations
+- **Reviewer Agent** – reviews, refines, and prepares the final output
+
+The result is a structured, decision-ready response rather than just a raw LLM answer.
+
+---
+
+## Screenshots
+
+## 1. Home Dashboard
+
+![Home Dashboard](assets/multiagent-home.png)
+
+The home screen allows the user to enter a workflow objective, trigger the multi-agent workflow, and view the overall orchestration layout.
+
+---
+
+## 2. Specialist Agent Outputs
+
+![Specialist Agent Outputs](assets/multiagent-execution.png)
+
+This screen shows how the workflow is decomposed into multiple agent stages, with each specialist agent generating its own structured output.
+
+---
+
+## 3. Final Workflow Results
+
+![Final Workflow Results](assets/multiagent-results.png)
+
+The final results page displays the consolidated output, including the executive summary, key findings, prioritized actions, and final recommendation.
 
 ---
 
 ## How It Works
 
+The system follows a multi-step orchestration flow:
+
 ```text
 User Objective
-      ↓
+   ↓
 LangGraph Planner
-      ↓
+   ↓
 Research Agent
-      ↓
+   ↓
 Analysis Agent
-      ↓
+   ↓
 Operations Agent
-      ↓
-Reviewer
-      ↓
+   ↓
+Reviewer Agent
+   ↓
 Final Decision-Ready Report
