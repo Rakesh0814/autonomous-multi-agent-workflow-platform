@@ -1,0 +1,59 @@
+{
+  "name": "Multi-Agent Workflow Completion",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "multi-agent-complete",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "webhook-node",
+      "name": "Workflow Completed Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        300,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "status",
+              "name": "automation_status",
+              "value": "Workflow received by n8n",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "set-node",
+      "name": "Record Automation Status",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        540,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Workflow Completed Webhook": {
+      "main": [
+        [
+          {
+            "node": "Record Automation Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {}
+}

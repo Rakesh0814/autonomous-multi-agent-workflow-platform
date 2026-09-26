@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autonomous Multi-Agent Workflow Platform</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="brand">
+        <div class="brand-logo">
+          <span>◇</span>
+        </div>
+        <span class="brand-name">MultiAgent</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="#workflow">Workflows</a>
+        <a href="#agents">Agents</a>
+        <a href="#results">Knowledge</a>
+        <a href="#results">Integrations</a>
+        <a href="#results">Settings</a>
+      </div>
+
+      <div class="nav-right">
+        <div class="search-box">
+          <span>⌕</span>
+          <input
+            type="text"
+            placeholder="Search workflows, agents..."
+            disabled
+          />
+        </div>
+
+        <button class="icon-button" type="button">♢</button>
+
+        <div class="avatar">R</div>
+      </div>
+    </nav>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-left">
+
+          <div class="eyebrow">
+            ORCHESTRATE&nbsp;&nbsp;·&nbsp;&nbsp;REASON&nbsp;&nbsp;·&nbsp;&nbsp;TAKE ACTION
+          </div>
+
+          <h1>
+            Autonomous Multi-Agent
+            <br />
+            Workflow Platform
+          </h1>
+
+          <p class="hero-description">
+            Coordinate specialized AI agents, preserve workflow memory,
+            and produce decision-ready outputs.
+          </p>
+
+          <!-- OBJECTIVE -->
+          <div class="objective-card" id="workflow">
+
+            <div class="objective-heading">
+              <div class="objective-title">
+                <div class="small-icon purple">▣</div>
+                <span>Describe your workflow objective</span>
+              </div>
+
+              <button
+                id="exampleBtn"
+                class="example-button"
+                type="button"
+              >
+                ✦ Use example
+              </button>
+            </div>
+
+            <textarea
+              id="goal"
+              placeholder="e.g. Analyze customer support resolution time, identify key drivers, and create a 30-day improvement plan with prioritized actions."
+            ></textarea>
+
+            <div class="objective-actions">
+
+              <div class="left-actions">
+                <button class="secondary-button disabled-action" type="button">
+                  ◇ Attach files
+                </button>
+
+                <button class="secondary-button disabled-action" type="button">
+                  ▱ Add context
+                </button>
+
+                <div class="web-search-pill">
+                  <span>◎ Web search</span>
+                  <div class="toggle active">
+                    <div class="toggle-circle"></div>
+                  </div>
+                </div>
+              </div>
+
+              <button id="run" class="run-button" type="button">
+                <span class="play-icon">▷</span>
+                Run multi-agent workflow
+                <span>→</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- AGENT VISUAL -->
+        <div class="hero-visual">
+
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+
+          <div class="orbit-dot dot-one"></div>
+          <div class="orbit-dot dot-two"></div>
+          <div class="orbit-dot dot-three"></div>
+
+          <div class="center-agent">
+            <div class="center-symbol">✦</div>
+            <strong>Multi-Agent</strong>
+            <span>Orchestration</span>
+          </div>
+
+          <div class="floating-agent research-float">
+            <div class="float-icon research-color">⌕</div>
+            <div>
+              <strong>Research</strong>
+              <span>Agent</span>
+            </div>
+          </div>
+
+          <div class="floating-agent analysis-float">
+            <div class="float-icon analysis-color">▥</div>
+            <div>
+              <strong>Analysis</strong>
+              <span>Agent</span>
+            </div>
+          </div>
+
+          <div class="floating-agent operations-float">
+            <div class="float-icon operations-color">⚙</div>
+            <div>
+              <strong>Operations</strong>
+              <span>Agent</span>
+            </div>
+          </div>
+
+          <div class="floating-agent reviewer-float">
+            <div class="float-icon reviewer-color">▤</div>
+            <div>
+              <strong>Reviewer</strong>
+              <span>Agent</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- AGENTS -->
+      <section class="agents-grid" id="agents">
+
+        <div class="agent-card">
+          <div class="agent-card-icon research-color">⌕</div>
+
+          <div class="agent-card-content">
+            <div class="agent-name-row">
+              <h3>Research Agent</h3>
+              <span class="agent-number">1</span>
+            </div>
+
+            <p>
+              Collects and synthesizes relevant information
+            </p>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-card-icon analysis-color">▥</div>
+
+          <div class="agent-card-content">
+            <div class="agent-name-row">
+              <h3>Analysis Agent</h3>
+              <span class="agent-number">2</span>
+            </div>
+
+            <p>
+              Analyzes data and identifies key insights
+            </p>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-card-icon operations-color">⚙</div>
+
+          <div class="agent-card-content">
+            <div class="agent-name-row">
+              <h3>Operations Agent</h3>
+              <span class="agent-number">3</span>
+            </div>
+
+            <p>
+              Creates plans and operational actions
+            </p>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-card-icon reviewer-color">▤</div>
+
+          <div class="agent-card-content">
+            <div class="agent-name-row">
+              <h3>Reviewer Agent</h3>
+              <span class="agent-number">4</span>
+            </div>
+
+            <p>
+              Validates, reviews and refines output
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- EXECUTION BAR -->
+      <section class="execution-strip">
+
+        <div>
+          <span class="status-label">Workflow Status</span>
+
+          <div class="status-row">
+            <span
+              id="statusDot"
+              class="status-dot idle-dot"
+            ></span>
+
+            <strong id="status">Ready</strong>
+          </div>
+        </div>
+
+        <div class="execution-meta">
+          <div>
+            <span>Workflow ID</span>
+            <strong id="workflowId">—</strong>
+          </div>
+
+          <div>
+            <span>Memory</span>
+            <strong id="memoryBackend">Local</strong>
+          </div>
+
+          <div>
+            <span>CrewAI</span>
+            <strong id="crewStatus">Enabled</strong>
+          </div>
+
+          <div>
+            <span>n8n</span>
+            <strong id="n8nStatus">Optional</strong>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- PLAN -->
+      <section
+        id="plan-card"
+        class="result-section hidden"
+      >
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">WORKFLOW</span>
+            <h2>Generated Agent Plan</h2>
+          </div>
+
+          <span class="section-badge">LangGraph</span>
+        </div>
+
+        <div id="plan" class="plan-grid"></div>
+      </section>
+
+      <!-- AGENT OUTPUTS -->
+      <section
+        id="agents-card"
+        class="result-section hidden"
+      >
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">EXECUTION</span>
+            <h2>Specialist Agent Outputs</h2>
+          </div>
+
+          <span class="section-badge">Multi-Agent</span>
+        </div>
+
+        <div
+          id="agent-results"
+          class="agent-output-grid"
+        ></div>
+      </section>
+
+      <!-- FINAL RESULTS -->
+      <section
+        id="report-card"
+        class="results-wrapper hidden"
+      >
+
+        <div class="results-header">
+          <div>
+            <span class="section-kicker">
+              WORKFLOW COMPLETE
+            </span>
+
+            <h2>Latest Workflow Results</h2>
+          </div>
+
+          <span class="completed-pill">
+            ✓ Completed
+          </span>
+        </div>
+
+        <div class="results-grid" id="results">
+
+          <div class="result-card">
+            <div class="result-heading">
+              <div class="result-icon blue-result">▤</div>
+              <h3>Executive Summary</h3>
+            </div>
+
+            <div
+              id="executiveSummary"
+              class="result-text"
+            >
+              Workflow results will appear here.
+            </div>
+          </div>
+
+          <div class="result-card">
+            <div class="result-heading">
+              <div class="result-icon purple-result">✦</div>
+              <h3>Key Findings</h3>
+            </div>
+
+            <div
+              id="keyFindings"
+              class="result-text"
+            ></div>
+          </div>
+
+          <div class="result-card">
+            <div class="result-heading">
+              <div class="result-icon green-result">✓</div>
+              <h3>Prioritized Actions</h3>
+            </div>
+
+            <div
+              id="actions"
+              class="result-text"
+            ></div>
+          </div>
+
+          <div class="result-card recommendation-card">
+
+            <div class="result-heading">
+              <div class="result-icon orange-result">★</div>
+              <h3>Final Recommendation</h3>
+            </div>
+
+            <div
+              id="recommendation"
+              class="result-text"
+            ></div>
+
+          </div>
+
+        </div>
+
+        <details class="full-report">
+          <summary>
+            View full reviewed report
+          </summary>
+
+          <pre id="report"></pre>
+        </details>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

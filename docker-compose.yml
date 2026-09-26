@@ -1,0 +1,20 @@
+services:
+  multi-agent-platform:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+
+  n8n:
+    image: n8nio/n8n:latest
+    profiles: ["automation"]
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  n8n_data:
